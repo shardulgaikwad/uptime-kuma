@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: uptime-kuma
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
